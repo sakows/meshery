@@ -348,7 +348,9 @@ class MesheryResults extends Component {
 
         return (
             <NoSsr>
-            <MUIDataTable title={"Meshery Results"} data={resultsForDisplay} columns={columns} options={options} />
+            <MUIDataTable title={"Meshery Results"} data={resultsForDisplay} columns={columns} options={options} 
+              // workaround for rendering the total count as suggested by https://github.com/gregnb/mui-datatables/issues/610
+              key={count} />
             </NoSsr>
         );
     }
